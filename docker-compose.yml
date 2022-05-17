@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+
+  jenkins:
+    image: jenkins:2.60.3-alpine
+    container_name: Jenkins
+    ports:
+      - 8080:8080
+    #volumes:
+      #- ./.jenkins:/var/jenkins_home/secrets/
+      #- ./.jenkins-backup:/var/jenkins_backup
+    networks:
+      - app 
+
+
+
+
+
+
+networks:
+  app:
+    driver: bridge
